@@ -23,7 +23,7 @@ pipeline {
         }
         stage("Third step") {
             steps {
-                sh 'ssh root@docker \'du -hs '/' 2> '/dev/null' \''
+                sh 'ssh root@docker \'du -hs / \''
             }
         }
     }
