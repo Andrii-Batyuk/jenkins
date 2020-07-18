@@ -16,17 +16,17 @@ pipeline {
                 sh 'ssh root@docker \'hostname\''
             }
         }
-        stage("Second step") {
+        stage("Show uptime") {
             steps {
                 sh 'ssh root@docker \'uptime\''
             }
         }
-        stage("Third step") {
+        stage("Show route") {
             steps {
                 sh 'ssh root@docker \'route -n\''
             }
         }
-        stage("Backup step") {
+        stage("Show links") {
             steps {
                 sh 'ssh root@docker \'ip link show\''
             }
