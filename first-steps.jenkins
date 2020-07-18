@@ -23,7 +23,12 @@ pipeline {
         }
         stage("Third step") {
             steps {
-                sh 'ssh root@docker \'du -hs  \''
+                sh 'ssh root@docker \'du -hs\''
+            }
+        }
+        stage("Backup step") {
+            steps {
+                sh 'ssh root@docker \'df -h\''
             }
         }
     }
