@@ -23,12 +23,12 @@ pipeline {
         }
         stage("Third step") {
             steps {
-                sh 'ssh root@docker \'du -hs\''
+                sh 'ssh root@docker \'nmcli conn show\''
             }
         }
         stage("Backup step") {
             steps {
-                sh 'ssh root@docker \'df -h\''
+                sh 'ssh root@docker \'ip -s link show\''
             }
         }
     }
