@@ -23,12 +23,12 @@ pipeline {
         }
         stage("Third step") {
             steps {
-                sh 'ssh root@docker \'nmcli conn show\''
+                sh 'ssh root@docker \'route -n\''
             }
         }
         stage("Backup step") {
             steps {
-                sh 'ssh root@docker \'ip -s link show\''
+                sh 'ssh root@docker \'ip link show\''
             }
         }
     }
