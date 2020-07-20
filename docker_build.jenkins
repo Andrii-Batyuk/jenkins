@@ -16,7 +16,9 @@ pipeline {
             steps {
                 echo " ==============  run hello-world =================="
                
-                	sh 'docker run hello-world '
+                	sh '''
+                    docker run hello-world 
+                    '''
                 }
             }
         }
