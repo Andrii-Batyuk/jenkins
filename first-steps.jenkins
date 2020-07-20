@@ -29,7 +29,7 @@ pipeline {
         stage("Show links") {
             steps {
                 sh 'ssh root@docker \'ip link show\''
-                sh 'netstat -tunalp'
+                sh 'hostname && netstat -tunalp'
                 sh 'ssh root@docker \'ps aux\''
             }
         }
