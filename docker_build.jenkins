@@ -12,9 +12,9 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("create docker image") {
+        stage(" run hello-world ") {
             steps {
-                echo " ============== start building image =================="
+                echo " ==============  run hello-world =================="
                
                 	sh 'docker run hello-world'
                 }
